@@ -8,7 +8,7 @@ import { ContactPage } from "../contact/contact";
   templateUrl: "tabs.html",
 })
 export class TabsPage {
-  public tab1Root: any = HomePage;
+  public home: any = HomePage;
   public tab2Root: any = AboutPage;
   public tab3Root: any = ContactPage;
 

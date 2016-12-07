@@ -1,7 +1,8 @@
 {
   "name": "fuel-control",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Gios",
+  "homepage": "https://github.com/gios/fuel-control",
+  "description": "Application for monitoring fuel consumption.",
   "private": true,
   "scripts": {
     "ionic:build": "ionic-app-scripts build",

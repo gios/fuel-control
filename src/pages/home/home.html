@@ -1,32 +1,38 @@
 <ion-content>
-  <ion-card>
-
-    <ion-card-content>
-      <ion-item>
-        <ion-label>Refill</ion-label>
+  <ion-grid>
+    <ion-col width-80 offset-10>
+      <ion-item class="no-padding">
+        <ion-label floating>Refill</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Mileage</ion-label>
+      <ion-card>
+        <ion-card-content>
+          lat: 48.243, lng: 32.343
+        </ion-card-content>
+      </ion-card>
+
+      <ion-item class="no-padding">
+        <ion-label floating>Mileage</ion-label>
         <ion-input type="number"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>The cost of 1 liter</ion-label>
+      <ion-item class="no-padding">
+        <ion-label floating>The cost of 1 liter</ion-label>
         <ion-input type="number"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Liters</ion-label>
+      <ion-item class="no-padding">
+        <ion-label floating>Liters</ion-label>
         <ion-input type="number"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Total</ion-label>
+      <ion-item class="no-padding">
+        <ion-label floating>Total</ion-label>
         <ion-input type="number"></ion-input>
       </ion-item>
-    </ion-card-content>
 
-  </ion-card>
+      <button ion-button block class="home-button">Save</button>
+    </ion-col>
+  </ion-grid>
 </ion-content>

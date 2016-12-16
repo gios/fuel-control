@@ -31,4 +31,7 @@
   <allow-navigation href="http://192.168.56.1:8000"/>
   <allow-navigation href="http://192.168.56.1:8080"/>
   <allow-navigation href="http://192.168.1.106:8000"/>
+  <plugin name="cordova-plugin-googlemaps" spec="~1.4.0">
+    <variable name="API_KEY_FOR_ANDROID" value="AIzaSyBczybIbFDOpFx3k9waHhvqzuTrz2-Zh98"/>
+  </plugin>
 </widget>

@@ -43,11 +43,11 @@ export class HomePage implements OnInit {
   }
 
   private getCurrentGeolocation() {
-    Geolocation.getCurrentPosition().then(response => {
+    Geolocation.getCurrentPosition({ enableHighAccuracy: true, timeout: 10000 }).then(response => {
       this.location.latitude = this.toNumber(response.coords.latitude, 6);
       this.location.longitude = this.toNumber(response.coords.longitude, 6);
     }).catch(error => {
-      console.error(`Geolocation error: ${error}`);
+      console.error(`Geolocation error: ${JSON.stringify(error)}`);
     });
   }
 }

@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 import { HomePage } from "../home/home";
 import { AboutPage } from "../about/about";
-import { ContactPage } from "../contact/contact";
+import { MapPage } from "../map/map";
 
 @Component({
   templateUrl: "tabs.html",
@@ -10,7 +10,7 @@ import { ContactPage } from "../contact/contact";
 export class TabsPage {
   public home: any = HomePage;
   public tab2Root: any = AboutPage;
-  public tab3Root: any = ContactPage;
+  public map: any = MapPage;
 
   constructor() {
     // TODO

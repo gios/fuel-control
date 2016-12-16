@@ -1,17 +1,25 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { NavController } from "ionic-angular";
+import { Geolocation } from "ionic-native";
+
+import { ILocation } from "./model";
 
 @Component({
   selector: "page-home",
   templateUrl: "home.html",
 })
-export class HomePage {
+export class HomePage implements OnInit {
   public mileage: number;
   public oneLiterCost: number;
   public liters: number;
   public total: number;
+  public location: ILocation = { latitude: 0, longitude: 0 };
 
   constructor(public navCtrl: NavController) { }
+
+  public ngOnInit() {
+    this.getCurrentGeolocation();
+  }
 
   public initFields(type: string) {
     setTimeout(() => {
@@ -32,5 +40,14 @@ export class HomePage {
 
   private toNumber(value: string | number, fixed = 2): number {
     return parseFloat(Number(value).toFixed(fixed));
+  }
+
+  private getCurrentGeolocation() {
+    Geolocation.getCurrentPosition().then(response => {
+      this.location.latitude = this.toNumber(response.coords.latitude, 6);
+      this.location.longitude = this.toNumber(response.coords.longitude, 6);
+    }).catch(error => {
+      console.error(`Geolocation error: ${error}`);
+    });
   }
 }
